@@ -23,7 +23,9 @@ contaCorrente2._saldo = 0;
 
 
 contaCorrente1.deposito(1000);
-contaCorrente1.transferencia(540, contaCorrente1);
+console.log(contaCorrente1);
+
+contaCorrente1.transferencia(200, contaCorrente2);
 
 console.log(contaCorrente1);
 console.log(contaCorrente2);

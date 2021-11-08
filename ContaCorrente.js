@@ -20,10 +20,10 @@ export class ContaCorrente{
         }
     }
 
-    transferencia(valor, ContaCorrente){
-        if(this._saldo >= valor && ContaCorrente != null){
+    transferencia(valor, conta){
+        if(this._saldo >= valor && conta != null){
             this.saque(valor);
-            ContaCorrente.deposito(valor);
+            conta.deposito(valor);
         }else{
             console.log("Verifique os dados inseridos ou tente novamente mais tarde!");
         }
