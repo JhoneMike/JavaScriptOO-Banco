@@ -1,8 +1,21 @@
+import { Cliente } from "./Cliente";
+
 export class ContaCorrente{
-    titular;
+    _titular;
     agencia;
     numero;
     _saldo;
+
+    //get e set titular
+    get titular(){
+        return this._titular;
+    }
+
+    set titular(titularDaConta){
+        if(titularDaConta instanceof Cliente){
+            this._titular = titularDaConta;
+        }        
+    }
 
     saque(valor){
         if(valor >= this._saldo || valor < 0){
