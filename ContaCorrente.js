@@ -1,4 +1,4 @@
-import { Cliente } from "./Cliente";
+import { Cliente } from "./Cliente.js";
 
 export class ContaCorrente{
     _titular;
@@ -15,6 +15,13 @@ export class ContaCorrente{
         if(titularDaConta instanceof Cliente){
             this._titular = titularDaConta;
         }        
+    }
+
+    constructor(titular, agencia, numero, saldo){
+        this._titular = titular;
+        this.agencia = agencia;
+        this.numero = numero;
+        this._saldo = saldo;
     }
 
     saque(valor){
