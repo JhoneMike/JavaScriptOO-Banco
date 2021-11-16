@@ -1,6 +1,7 @@
 import { Cliente } from "./Cliente.js";
+import { Conta } from "./Conta.js";
 
-export class ContaCorrente{
+export class ContaCorrente extends Conta{
     _titular;
     agencia;
     numero;
