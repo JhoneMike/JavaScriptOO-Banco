@@ -7,5 +7,8 @@ export class ContaCorrente extends Conta{
         super(0, titular, agencia, numero);
     }
 
+    saque(valor){
+        
+    }
     
 }
