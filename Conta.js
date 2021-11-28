@@ -1,9 +1,13 @@
 export class Conta{
-    constructor(saldo, titular, agencia, numero){
-        this._saldo = saldo;
+    constructor(titular, agencia, numero, saldo){
+
+        if(this.constructor == Conta){
+            throw new Error("Não é permitido isntaciar um objeto do tipo Conta, favor verifique e isntancie um objeto mais especifico!");
+        }
         this._titular = titular;
         this._agencia = agencia;
         this._numero = numero;
+        this._saldo = saldo;
     }
 
     get titular(){
@@ -17,11 +21,7 @@ export class Conta{
     }
 
     saque(valor){
-        if(valor >= this._saldo || valor < 0){
-            return;
-        }
-        this._saldo -= valor;
-        return valor;
+        throw new Error("Esse metodo é abstrato!")
     }
 
     deposito(valor){
