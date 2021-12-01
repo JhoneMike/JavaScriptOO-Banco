@@ -32,7 +32,7 @@ export class Conta{
         }
     }
 
-    transferencia(valor, conta){
+    transferencia(conta, valor){
         if(this._saldo >= valor && conta != null){
             this.saque(valor);
             conta.deposito(valor);

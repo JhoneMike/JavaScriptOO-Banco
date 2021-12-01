@@ -11,7 +11,10 @@ const contaCorrente2 = new ContaCorrente(cliente2, 2000, 20214-2, 0);
 const contaPoupanca = new ContaPoupanca(cliente3, 3000, 20265-7, 100);
 
 contaCorrente1.deposito(2000);
-contaCorrente1.transferencia(100, contaCorrente2);
+console.log("Saldo da conta Corrente1 antes da transferencia,",contaCorrente1._saldo);
+console.log("Saldo da conta Corrente2 antes da transferencia,",contaCorrente2._saldo);
+contaCorrente1.transferencia(contaCorrente2, 100);
+
 
 console.log(contaCorrente1);
 console.log(contaCorrente2);
