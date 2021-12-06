@@ -1,6 +1,7 @@
-import { Cliente } from "./Cliente.js";
-import { ContaCorrente } from "./ContaCorrente.js";
-import { ContaPoupanca } from "./ContaPoupanca.js";
+import { Cliente } from "./clientes/Cliente.js";
+import { ContaCorrente } from "./contas/ContaCorrente.js";
+import { ContaPoupanca } from "./contas/ContaPoupanca.js";
+import { Gerente } from "./Funcionarios/Gerente.js";
 
 const cliente1 = new Cliente('João', 99944433309);
 const cliente2 = new Cliente('Jessica', 88844455503);
@@ -15,6 +16,7 @@ console.log("Saldo da conta Corrente1 antes da transferencia,",contaCorrente1._s
 console.log("Saldo da conta Corrente2 antes da transferencia,",contaCorrente2._saldo);
 contaCorrente1.transferencia(contaCorrente2, 100);
 
+const gerente = new Gerente("João", 12343223456, 40, 30000);
+gerente.definirSenha("1234");
 
-console.log(contaCorrente1);
-console.log(contaCorrente2);
+console.log(gerente);
